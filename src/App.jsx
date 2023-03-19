@@ -19,6 +19,8 @@ function App() {
   }, [time]);
 
   useEffect(() => {
+    setDate([]);
+    setPrice([]);
     let getDate = data.map((i) => {
       return i[0];
     });
@@ -28,6 +30,9 @@ function App() {
     setDate(getDate);
     setPrice(getPrice);
   }, [data]);
+
+  console.log(date);
+  console.log(price);
 
   return <>
   <div className="App">
